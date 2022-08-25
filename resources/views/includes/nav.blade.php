@@ -23,7 +23,11 @@
                     <li class="list-inline-item"><a href="https://instagram.com/interiorcat"><i class="fab fa-instagram fa-fw"></i></a></li>
                     <li class="list-inline-item"><a href="https://facebook.com/interiorcat"><i class="fab fa-facebook fa-fw"></i></a></li>
                     </ul>
-                <a href="{{route('login.form')}}" class="btn btn-primary d-none d-lg-flex">Gestió</a>
+                @if ( auth()->check() )
+                <a href="{{route('gestio')}}" class="btn btn-primary btn-circle d-none d-lg-flex"><i class="fa-solid fa-screwdriver-wrench"></i></a>
+                @else
+                    <a href="{{route('login.form')}}" class="btn btn-primary d-none d-lg-flex">Gestió</a>
+                @endif
             </div>
         </div>
     </div>

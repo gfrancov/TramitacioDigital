@@ -17,10 +17,84 @@
 	    <div class="container">
 		    <div class="docs-overview py-5">
 			    <div class="row justify-content-center">
-                    <div class="col-12">
-                        <p>Gestió!</p>
+                    <div class="col-lg-4 col-12">
+
+                        <!-- Card de tasca -->
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title mb-3">
+                                    <span class="theme-icon-holder card-icon-holder me-2">
+                                        <i class="fa-solid fa-diagram-project"></i>
+                                    </span>
+                                    <span class="card-title-text">Gestionar Fases</span>
+                                </h5>
+                                <div class="card-text">
+                                    Per gestionar totes les fases del circuit:
+                                    <ul>
+                                        <li>Modificar contingut</li>
+                                        <li>Canviar l'ordre</li>
+                                        <li>Crear una nova</li>
+                                    </ul>
+                                </div>
+                                <a class="card-link-mask" href="/gestio/fases"></a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-4 col-12">
+
+                        <!-- Card de tasca -->
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title mb-3">
+                                    <span class="theme-icon-holder card-icon-holder me-2">
+                                        <i class="fa-solid fa-bars-progress"></i>
+                                    </span>
+                                    <span class="card-title-text">Gestionar Procediments</span>
+                                </h5>
+                                <div class="card-text">
+                                    Per gestionar els procediments de cada fase:
+                                    <ul>
+                                        <li>Modificar contingut</li>
+                                        <li>Canviar l'ordre</li>
+                                        <li>Crear un de nou</li>
+                                    </ul>
+                                </div>
+                                <a class="card-link-mask" href="/gestio/procediments"></a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-4 col-12">
+
+                        <!-- Card de tasca -->
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title mb-3">
+                                    <span class="theme-icon-holder card-icon-holder me-2">
+                                        <i class="fa-solid fa-users"></i>
+                                    </span>
+                                    <span class="card-title-text">Gestionar Usuaris</span>
+                                </h5>
+                                <div class="card-text">
+                                    Gestiona els usuaris:
+                                    <ul>
+                                        <li>Modificar usuaris</li>
+                                        <li>Eliminar un usuari</li>
+                                        <li>Crear un usuari</li>
+                                    </ul>
+                                </div>
+                                <a class="card-link-mask" href="/gestio/usuaris"></a>
+                            </div>
+                        </div>
+
                     </div>
 			    </div>
+                <div class="row justify-content-center">
+                    <div class="col-12">
+                        <a href="{{route('sortir')}}" class="btn btn-primary mt-4" style="width: 100%"><i class="fa-solid fa-arrow-right-from-bracket"></i> Tancar sessió</a>
+                    </div>
+                </div>
 		    </div>
 		</div>
     </div>

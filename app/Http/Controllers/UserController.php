@@ -33,9 +33,24 @@ class UserController extends Controller
     }
 
     public function gestio() {
-        return view('gestio', array(
-            'titol' => 'Gestió'
-        ));
+
+        if( auth()->check() ) {
+
+            return view('gestio', array(
+                'titol' => 'Gestió'
+            ));
+
+        } else {
+
+            return redirect()->to('/');
+
+        }
+
+    }
+
+    public function sortir() {
+        auth()->logout();
+        return redirect()->to('/');
     }
 
 

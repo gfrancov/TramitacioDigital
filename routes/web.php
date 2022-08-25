@@ -23,6 +23,7 @@ Route::get('/fase/{slug?}', [FaseController::class, 'printFase']);
 
 // Rutes d'usuari
 Route::get('/gestio/acces', [UserController::class, 'loginForm'])->name('login.form');
+Route::get('/gestio/sortir', [UserController::class, 'sortir'])->name('sortir');
 Route::post('/gestio/validacio', [UserController::class, 'validarLogin'])->name('login.validacio');
 Route::get('/gestio', [UserController::class, 'gestio'])->name('gestio');
 
