@@ -1,3 +1,32 @@
+/*
+ * Generalitat de Catalunya
+ * Departament d'Interior
+ * 2022
+ *
+ * Author: Gabriel Franco
+ *
+*/
+
+/* Mida del logo al nav */
 img.logo-icon {
     width: 200px;
+}
+
+/* Formularis */
+.acces-form .form-control {
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.form-control input {
+    width: 100%;
+}
+.form-control label {
+    font-weight: 600;
+}
+.error-message {
+    font-size: 13px;
+    color: rgb(218, 9, 9);
 }

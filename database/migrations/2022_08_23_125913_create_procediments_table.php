@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('nom');
             $table->string('slug');
             $table->unsignedBigInteger('fase');
-            $table->string('contingut');
+            $table->longText('contingut');
             $table->integer('ordre');
             $table->timestamps();
             $table->foreign('fase')->references('id')->on('fases')->onDelete('cascade');

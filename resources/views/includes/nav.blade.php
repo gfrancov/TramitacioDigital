@@ -23,7 +23,7 @@
                     <li class="list-inline-item"><a href="https://instagram.com/interiorcat"><i class="fab fa-instagram fa-fw"></i></a></li>
                     <li class="list-inline-item"><a href="https://facebook.com/interiorcat"><i class="fab fa-facebook fa-fw"></i></a></li>
                     </ul>
-                <a href="#" class="btn btn-primary d-none d-lg-flex">Gestió</a>
+                <a href="{{route('login.form')}}" class="btn btn-primary d-none d-lg-flex">Gestió</a>
             </div>
         </div>
     </div>

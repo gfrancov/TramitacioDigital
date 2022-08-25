@@ -54,9 +54,9 @@
 		    <h3 class="mb-2 text-white mb-3">Creus que necessites més informació?</h3>
 		    <div class="section-intro text-white mb-3 single-col-max mx-auto">Si creus que necessites més informació o documentació sobre com funciona el procediment per a la implantació d'un tràmit digital pots consultar els següents tres documents:</div>
 		    <div class="pt-3 text-center">
-			    <a class="btn btn-light" href="https://espai.interior.gencat.cat/Eines-recursos/Administracio-electronica/Transformaci%C3%B3_Digital/Documents/Guia%20del%20circuit%20d%27implantaci%C3%B3%20d%27un%20tr%C3%A0mit%20digital_v25.pdf" target="_blank">Guia <i class="fas fa-folder-open ml-2"></i></a>
-                <a class="btn btn-light" href="#" target="_blank">Guia breu <i class="fas fa-book ml-2"></i></a>
-                <a class="btn btn-light" href="https://espai.interior.gencat.cat/Eines-recursos/Administracio-electronica/Transformaci%C3%B3_Digital/Documents/Infografia%20del%20circuit%20d%E2%80%99implantaci%C3%B3%20d%E2%80%99un%20tr%C3%A0mit%20digital.pdf" target="_blank">Infografia <i class="fas fa-file ml-2"></i></a>
+			    <a class="btn btn-light m-1" href="https://espai.interior.gencat.cat/Eines-recursos/Administracio-electronica/Transformaci%C3%B3_Digital/Documents/Guia%20del%20circuit%20d%27implantaci%C3%B3%20d%27un%20tr%C3%A0mit%20digital_v25.pdf" target="_blank">Guia <i class="fas fa-folder-open ml-2"></i></a>
+                <a class="btn btn-light m-1" href="#" target="_blank">Guia breu <i class="fas fa-book ml-2"></i></a>
+                <a class="btn btn-light m-1" href="https://espai.interior.gencat.cat/Eines-recursos/Administracio-electronica/Transformaci%C3%B3_Digital/Documents/Infografia%20del%20circuit%20d%E2%80%99implantaci%C3%B3%20d%E2%80%99un%20tr%C3%A0mit%20digital.pdf" target="_blank">Infografia <i class="fas fa-file ml-2"></i></a>
 		    </div>
 	    </div>
     </section><!--//cta-section-->
