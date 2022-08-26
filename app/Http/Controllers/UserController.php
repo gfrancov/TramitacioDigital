@@ -53,6 +53,15 @@ class UserController extends Controller
         return redirect()->to('/');
     }
 
+    public static function checkLogin() {
+
+        if( auth()->check() ) {
+        } else {
+            return redirect()->to('/gestio/acces');
+        }
+
+    }
+
 
 
 }

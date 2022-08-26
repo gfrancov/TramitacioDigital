@@ -38,15 +38,35 @@
 	    </div><!--//docs-sidebar-->
 	    <div class="docs-content">
 		    <div class="container">
-			    <article class="docs-article" id="section-1">
-				    <header class="docs-header">
-					    <h1 class="docs-heading mb-2">{{$actualFase->nom}} <span class="docs-time">Actualitzat: {{$actualFase->updated_at}}</span></h1>
-                        <p>{{$actualFase->descripcio}}</p>
-				    </header>
+			    <article class="docs-article pt-0" id="section-1">
                     @foreach ( $actualProcediments as $actualProcediment )
 
-				    <section class="docs-section" id="{{$actualProcediment->slug}}">
-						<h2 class="section-heading">{{$actualProcediment->nom}}</h2>
+				    <section class="docs-section" agent="{{$actualProcediment->actor}}" id="{{$actualProcediment->slug}}">
+						<h2 class="section-heading">
+                            @if ( auth()->check() )
+                                <a href="/gestio/procediment/editar/{{$actualProcediment->slug}}"><i class="fa-solid fa-pen-to-square"></i></a>
+                            @endif
+                            {{$actualProcediment->nom}}
+                            @switch($actualProcediment->actor)
+                                @case('Sol·licitant')
+                                    <span class="badge bg-warning">Sol·licitant</span>
+                                    @break
+
+                                @case('Agent GT')
+                                    <span class="badge bg-info">GT Administració Digital</span>
+                                    @break
+
+                                @case('Responsable CCP')
+                                    <span class="badge bg-danger">Responsable CCP</span>
+                                    @break
+
+                                @case('ATIC')
+                                    <span class="badge bg-success">Àrea TIC</span>
+                                    @break
+                                @default
+
+                            @endswitch
+                        </h2>
 
                         {!! $actualProcediment->contingut !!}
 
@@ -57,7 +77,7 @@
 			    </article>
                 @if ($seguentFase)
 
-                <p>Següent fase: <a href="/fase/{{$seguentFase->slug}}">{{$seguentFase->nom}}</a></p>
+                <p class="docs-article">Següent fase: <a href="/fase/{{$seguentFase->slug}}">{{$seguentFase->nom}}</a></p>
 
                 @endif
             </div>

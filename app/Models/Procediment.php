@@ -8,4 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Procediment extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'nom',
+        'slug',
+        'actor',
+        'fase',
+        'contingut',
+        'ordre'
+    ];
+
 }

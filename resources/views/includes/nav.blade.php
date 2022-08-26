@@ -18,7 +18,7 @@
                 </div>
 
                 <ul class="social-list list-inline mx-md-3 mx-lg-5 mb-0 d-none d-lg-flex">
-                    <li class="list-inline-item"><a href="https://github.com/gfrancov/doc-digital-tramit"><i class="fab fa-github fa-fw"></i></a></li>
+                    <li class="list-inline-item"><a href="https://github.com/gfrancov/TramitacioDigital"><i class="fab fa-github fa-fw"></i></a></li>
                     <li class="list-inline-item"><a href="https://twitter.com/interiorcat"><i class="fab fa-twitter fa-fw"></i></a></li>
                     <li class="list-inline-item"><a href="https://instagram.com/interiorcat"><i class="fab fa-instagram fa-fw"></i></a></li>
                     <li class="list-inline-item"><a href="https://facebook.com/interiorcat"><i class="fab fa-facebook fa-fw"></i></a></li>

@@ -17,7 +17,7 @@ class ProcedimentSeeder extends Seeder
     {
         // Llistat de fases predefinides
         $procediments = [
-            array('nom' => 'Enviament de la sol·licitud', 'slug' => 'enviament-de-la-solicitud', 'fase' => 1, 'contingut' => "                        <p>Haurà d'<b>enviar la sol·licitud</b> mitjançant un <b>correu electrònic</b>, depenent de l'àrea pot canviar l'adreça destinatària.</p>
+            array('nom' => 'Enviament de la sol·licitud', 'slug' => 'enviament-de-la-solicitud','actor' => 'Sol·licitant', 'fase' => 1, 'contingut' => "                        <p>Haurà d'<b>enviar la sol·licitud</b> mitjançant un <b>correu electrònic</b>, depenent de l'àrea pot canviar l'adreça destinatària.</p>
             <p>En primer lloc ha d'omplir el següent formulari en format excel: </p>
             <a href='https://espai.interior.gencat.cat/Eines-recursos/Administracio-electronica/Documents/Formulari%20d%27enviament%20sol%C2%B7licitud.xlsx' class='btn btn-success mb-3'><i class='fa-solid fa-file-excel'></i> Descarregar excel</a>
             <p>I un cop omplert el formulari Excel, l'<b>enviarà</b> al <b>correu destinatari</b>, que pot ser un dels següents:</p>
@@ -62,7 +62,7 @@ class ProcedimentSeeder extends Seeder
                 </table>
             </div>
 ", 'ordre' => 1),
-            array('nom' => 'Estudi de la sol·licitud', 'slug' => 'estudi-de-la-solicitud', 'fase' => 1, 'contingut' => "<p>El grup INT_GT Administració Digital rep la sol·licitud i s'hauran d'iniciar les següents accions:</p>", 'ordre' => 2),
+            array('nom' => 'Estudi de la sol·licitud', 'slug' => 'estudi-de-la-solicitud', 'actor' => 'Agent GT', 'fase' => 1, 'contingut' => "<p>El grup INT_GT Administració Digital rep la sol·licitud i s'hauran d'iniciar les següents accions:</p>", 'ordre' => 2),
             array('nom' => 'Prova procediment', 'slug' => 'prova-procediment', 'fase' => 3, 'contingut' => "                        <p>Haurà d'<b>enviar la sol·licitud</b> mitjançant un <b>correu electrònic</b>, depenent de l'àrea pot canviar l'adreça destinatària.</p>
             <p>En primer lloc ha d'omplir el següent formulari en format excel: </p>
             <a href='https://espai.interior.gencat.cat/Eines-recursos/Administracio-electronica/Documents/Formulari%20d%27enviament%20sol%C2%B7licitud.xlsx' class='btn btn-success mb-3'><i class='fa-solid fa-file-excel'></i> Descarregar excel</a>

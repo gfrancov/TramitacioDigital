@@ -32,7 +32,7 @@
                                         <span class="theme-icon-holder card-icon-holder me-2">
                                             <i class="fas {{$fase->icona}}"></i>
                                         </span>
-                                        <span class="card-title-text">{{$fase->nom}}</span>
+                                        <span class="card-title-text">{{$fase->ordre}} &mdash; {{$fase->nom}}</span>
                                     </h5>
                                     <div class="card-text">
                                         {{$fase->descripcio}}

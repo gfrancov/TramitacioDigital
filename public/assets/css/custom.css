@@ -39,3 +39,33 @@ img.logo-icon {
     padding: 15px !important;
     font-size: 20px;
 }
+
+/* Docs section */
+.docs-section .badge {
+    font-size: 16px;
+}
+
+/* Gestió procediments */
+.fila-procediment {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.procediments-botons .btn {
+    font-size: 13px;
+    padding: 2px;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+.nou-procediment .btn {
+    width: 100%;
+    font-size: 14px;
+    padding: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* Textarea de HTML */
+textarea {
+    font-family: 'Consolas', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}

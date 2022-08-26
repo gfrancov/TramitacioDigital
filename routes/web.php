@@ -16,12 +16,24 @@ use App\Http\Controllers\UserController;
 |
 */
 
-// Rutes amb fases
+// Adreces de fases
 Route::get('/', [FaseController::class, 'landing'])->name('inici');
 Route::get('/fase', [FaseController::class, 'fase'])->name('fase');
 Route::get('/fase/{slug?}', [FaseController::class, 'printFase']);
+Route::get('/gestio/fases', [FaseController::class, 'gestioFases'])->name('gestio.fases');
 
-// Rutes d'usuari
+// Adreces de procediments
+Route::get('/gestio/procediments', [ProcedimentController::class, 'gestioProcediments'])->name('gestio.procediments');
+Route::get('/gestio/procediment/crear/{faseSlug?}', [ProcedimentController::class, 'formCrearProcediment'])->name('gestio.procediments.crear.formulari');
+Route::get('/gestio/xuleta', function() {
+    return view('xuleta',['titol' => 'Xuleta']);
+});
+Route::post('/gestio/procediment/crear/validacio', [ProcedimentController::class, 'crearProcediment'])->name('gestio.procediments.crear');
+Route::get('/gestio/procediment/editar/{faseSlug?}', [ProcedimentController::class, 'formModificarProcediment'])->name('gestio.procediments.modificar.formulari');
+Route::post('/gestio/procediment/editar', [ProcedimentController::class, 'modificarProcediment'])->name('gestio.procediments.modificar');
+
+
+// Adreces d'usuari
 Route::get('/gestio/acces', [UserController::class, 'loginForm'])->name('login.form');
 Route::get('/gestio/sortir', [UserController::class, 'sortir'])->name('sortir');
 Route::post('/gestio/validacio', [UserController::class, 'validarLogin'])->name('login.validacio');

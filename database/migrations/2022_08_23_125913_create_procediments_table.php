@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('nom');
             $table->string('slug');
+            $table->string('actor')->default('Agent GT');
             $table->unsignedBigInteger('fase');
             $table->longText('contingut');
             $table->integer('ordre');

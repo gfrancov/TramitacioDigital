@@ -17,10 +17,10 @@
 	    <div class="container">
 		    <div class="docs-overview py-5">
 			    <div class="row justify-content-center">
-                    <div class="col-lg-4 col-12">
+                    <div class="col-lg-4 col-12 mb-2">
 
                         <!-- Card de tasca -->
-                        <div class="card shadow-sm">
+                        <div class="card shadow-sm mb-2">
                             <div class="card-body">
                                 <h5 class="card-title mb-3">
                                     <span class="theme-icon-holder card-icon-holder me-2">
@@ -36,15 +36,15 @@
                                         <li>Crear una nova</li>
                                     </ul>
                                 </div>
-                                <a class="card-link-mask" href="/gestio/fases"></a>
+                                <a class="card-link-mask" href="{{route('gestio.fases')}}"></a>
                             </div>
                         </div>
 
                     </div>
-                    <div class="col-lg-4 col-12">
+                    <div class="col-lg-4 col-12 mb-2">
 
                         <!-- Card de tasca -->
-                        <div class="card shadow-sm">
+                        <div class="card shadow-sm mb-2">
                             <div class="card-body">
                                 <h5 class="card-title mb-3">
                                     <span class="theme-icon-holder card-icon-holder me-2">
@@ -60,15 +60,15 @@
                                         <li>Crear un de nou</li>
                                     </ul>
                                 </div>
-                                <a class="card-link-mask" href="/gestio/procediments"></a>
+                                <a class="card-link-mask" href="{{route('gestio.procediments')}}"></a>
                             </div>
                         </div>
 
                     </div>
-                    <div class="col-lg-4 col-12">
+                    <div class="col-lg-4 col-12 mb-2">
 
                         <!-- Card de tasca -->
-                        <div class="card shadow-sm">
+                        <div class="card shadow-sm mb-2">
                             <div class="card-body">
                                 <h5 class="card-title mb-3">
                                     <span class="theme-icon-holder card-icon-holder me-2">
