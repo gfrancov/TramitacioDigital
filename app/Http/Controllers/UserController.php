@@ -217,8 +217,6 @@ class UserController extends Controller
         $faseDescripcio = Fase::where('descripcio', 'LIKE', "%$string%")
         ->orWhere('nom', 'LIKE', "%$string%")->get();
 
-
-
         return view('cercador', array(
             'titol' => 'Resultats',
             'llistatProcediments' => $procedimentsContingut,

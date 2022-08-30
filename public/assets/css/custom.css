@@ -44,7 +44,9 @@ img.logo-icon {
 .docs-section .badge {
     font-size: 16px;
 }
-
+.docs-section ul li, .docs-section ol li{
+    padding: 0;
+}
 /* Gestió procediments */
 .fila-procediment {
     display: flex;
