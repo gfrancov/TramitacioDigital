@@ -46,4 +46,10 @@ Route::get('/gestio/acces', [UserController::class, 'loginForm'])->name('login.f
 Route::get('/gestio/sortir', [UserController::class, 'sortir'])->name('sortir');
 Route::post('/gestio/validacio', [UserController::class, 'validarLogin'])->name('login.validacio');
 Route::get('/gestio', [UserController::class, 'gestio'])->name('gestio');
-
+Route::get('/gestio/usuaris', [UserController::class, 'llistat'])->name('gestio.usuaris.llistat');
+Route::get('/gestio/usuari/crear', [UserController::class, 'formCrearUsuari'])->name('gestio.usuaris.crear.formulari');
+Route::post('/gestio/usuari/crear/validacio', [UserController::class, 'crearUsuari'])->name('gestio.usuaris.crear');
+Route::get('/gestio/usuari/editar/{id}', [UserController::class, 'formModificarUsuari'])->name('gestio.usuaris.modificar.formulari');
+Route::post('/gestio/usuari/editar', [UserController::class, 'modificarUsuari'])->name('gestio.usuaris.modificar');
+Route::get('/gestio/usuari/eliminar/{id}', [UserController::class, 'formEliminarUsuari'])->name('gestio.usuaris.eliminar.formulari');
+Route::post('/gestio/usuari/eliminar', [UserController::class, 'eliminarUsuari'])->name('gestio.usuaris.eliminar');

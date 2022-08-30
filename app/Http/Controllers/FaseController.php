@@ -152,9 +152,14 @@ class FaseController extends Controller
     // Eliminar fase
     public function eliminarFase(Request $request) {
 
-        Fase::where('id', $request->input('id'))->delete();
+        if( auth()->check() ) {
+            Fase::where('id', $request->input('id'))->delete();
 
-        return redirect('/gestio/fases');
+            return redirect('/gestio/fases');
+
+        } else {
+            return redirect()->to('/gestio/acces');
+        }
 
     }
 
