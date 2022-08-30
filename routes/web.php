@@ -29,6 +29,7 @@ Route::get('/gestio/fase/crear', [FaseController::class, 'formCrearFase'])->name
 Route::post('/gestio/fase/crear/validacio', [FaseController::class, 'crearFase'])->name('gestio.fase.crear');
 
 // Adreces de procediments
+Route::get('/procediment/{slug?}', [ProcedimentController::class, 'redireccionar']);
 Route::get('/gestio/procediments', [ProcedimentController::class, 'gestioProcediments'])->name('gestio.procediments');
 Route::get('/gestio/procediment/crear/{faseSlug?}', [ProcedimentController::class, 'formCrearProcediment'])->name('gestio.procediments.crear.formulari');
 Route::get('/gestio/xuleta', function() {
@@ -53,3 +54,4 @@ Route::get('/gestio/usuari/editar/{id}', [UserController::class, 'formModificarU
 Route::post('/gestio/usuari/editar', [UserController::class, 'modificarUsuari'])->name('gestio.usuaris.modificar');
 Route::get('/gestio/usuari/eliminar/{id}', [UserController::class, 'formEliminarUsuari'])->name('gestio.usuaris.eliminar.formulari');
 Route::post('/gestio/usuari/eliminar', [UserController::class, 'eliminarUsuari'])->name('gestio.usuaris.eliminar');
+Route::get('/cercador', [UserController::class, 'cercador'])->name('cercador');

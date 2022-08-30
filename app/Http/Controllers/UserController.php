@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
 use App\Models\User;
+use App\Models\Procediment;
+use App\Models\Fase;
 
 class UserController extends Controller
 {
@@ -195,9 +197,7 @@ class UserController extends Controller
         if( auth()->check() ) {
 
             User::where('id', $request->input('id'))->delete();
-
             return redirect('/gestio/usuaris');
-
 
         } else {
             return redirect()->to('/gestio/acces');
@@ -205,9 +205,26 @@ class UserController extends Controller
 
     }
 
+    // Cercador
+    public function cercador(Request $request) {
+
+        $string = $request->query('q');
+
+        $procedimentsContingut = Procediment::where('nom', 'LIKE', "%$string%")
+        ->orWhere('contingut', 'LIKE', "%$string%")
+        ->orWhere('actor', 'LIKE', "%$string%")->get();
+
+        $faseDescripcio = Fase::where('descripcio', 'LIKE', "%$string%")
+        ->orWhere('nom', 'LIKE', "%$string%")->get();
 
 
 
+        return view('cercador', array(
+            'titol' => 'Resultats',
+            'llistatProcediments' => $procedimentsContingut,
+            'llistatFases' => $faseDescripcio
+        ));
 
+    }
 
 }

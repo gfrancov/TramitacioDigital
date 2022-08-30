@@ -148,4 +148,15 @@ class ProcedimentController extends Controller
 
     }
 
+    // Redirect procediment
+    public function redireccionar($slug) {
+
+        $procediment = $this->getProcediment($slug);
+
+        $fase = FaseController::getFaseId($procediment->fase);
+
+        return redirect("/fase/$fase->slug/#$procediment->slug");
+
+    }
+
 }

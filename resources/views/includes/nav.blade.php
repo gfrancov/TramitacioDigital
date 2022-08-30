@@ -11,9 +11,9 @@
             </div>
             <div class="docs-top-utilities d-flex justify-content-end align-items-center">
                 <div class="top-search-box d-none d-lg-flex">
-                    <form class="search-form">
-                        <input type="text" placeholder="Cerca a la documentació" name="search" class="form-control search-input">
-                        <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
+                    <form class="search-form" method="GET" action="{{route('cercador')}}">
+                        <input type="text" placeholder="Cerca a la documentació" name="q" class="form-control search-input">
+                        <button type="submit" class="btn search-btn" value="q"><i class="fas fa-search"></i></button>
                     </form>
                 </div>
 

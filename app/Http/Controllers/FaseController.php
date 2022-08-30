@@ -65,6 +65,12 @@ class FaseController extends Controller
         return $fase[0];
     }
 
+    // Aconseguir info de la fase segons l'id
+    public static function getFaseId($id) {
+        $fase = Fase::where('id', $id)->get();
+        return $fase[0];
+    }
+
     // Aconseguir següent fase segons l'ordre
     public function nextFase($ordre) {
         $nextFase = $ordre + 1;

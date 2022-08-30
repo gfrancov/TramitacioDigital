@@ -11,9 +11,9 @@
 		    <h1 class="page-heading single-col-max mx-auto">Guia Interactiva</h1>
 		    <div class="page-intro single-col-max mx-auto">Aquí trobaràs la informació necessaria sobre les fases i cadascun dels procediments que existeixen a la implantació d'un tràmit digital.</div>
 		    <div class="main-search-box pt-3 d-block mx-auto">
-                 <form class="search-form w-100">
-		            <input type="text" placeholder="Cerca a la documentació" name="search" class="form-control search-input">
-		            <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
+                 <form class="search-form w-100" method="GET" action="{{route('cercador')}}">
+		            <input type="text" placeholder="Cerca a la documentació" name="q" class="form-control search-input">
+		            <button type="submit" class="btn search-btn" value="q"><i class="fas fa-search"></i></button>
 		        </form>
              </div>
 	    </div>
