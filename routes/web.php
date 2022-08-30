@@ -21,6 +21,12 @@ Route::get('/', [FaseController::class, 'landing'])->name('inici');
 Route::get('/fase', [FaseController::class, 'fase'])->name('fase');
 Route::get('/fase/{slug?}', [FaseController::class, 'printFase']);
 Route::get('/gestio/fases', [FaseController::class, 'gestioFases'])->name('gestio.fases');
+Route::get('/gestio/fase/editar/{slug}', [FaseController::class, 'formModificarFase'])->name('gestio.fase.formulari.modificar');
+Route::post('/gestio/fase/editar', [FaseController::class, 'modificarFase'])->name('gestio.fase.modificar');
+Route::get('/gestio/fase/eliminar/{slug?}', [FaseController::class, 'formEliminarFase'])->name('gestio.fase.eliminar.formulari');
+Route::post('/gestio/fase/eliminar', [FaseController::class, 'eliminarFase'])->name('gestio.fase.eliminar');
+Route::get('/gestio/fase/crear', [FaseController::class, 'formCrearFase'])->name('gestio.fase.crear.formulari');
+Route::post('/gestio/fase/crear/validacio', [FaseController::class, 'crearFase'])->name('gestio.fase.crear');
 
 // Adreces de procediments
 Route::get('/gestio/procediments', [ProcedimentController::class, 'gestioProcediments'])->name('gestio.procediments');

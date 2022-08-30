@@ -97,4 +97,95 @@ class FaseController extends Controller
 
     }
 
+    // Formulari modificació
+    public function formModificarFase($slugFase) {
+
+        if( auth()->check() ) {
+            $fase = $this->getFase($slugFase);
+
+            return view('fases.modificar', array(
+                'titol' => 'Modificar fase',
+                'fase' => $fase
+            ));
+        } else {
+            return redirect()->to('/gestio/acces');
+        }
+
+    }
+
+    // Modificació de fase
+    public function modificarFase(Request $request) {
+
+        if( auth()->check() ) {
+            $fase = Fase::find( $request->input('id') );
+            $fase->nom = $request->input('nom');
+            $fase->slug = $request->input('slug');
+            $fase->icona = $request->input('icona');
+            $fase->descripcio = $request->input('descripcio');
+            $fase->ordre = $request->input('ordre');
+            $fase->save();
+
+            return redirect('/gestio/fases');
+
+        } else {
+            return redirect()->to('/gestio/acces');
+        }
+
+    }
+
+    // Formulari d'eliminació de fase
+    public function formEliminarFase($slugFase) {
+
+        if( auth()->check() ) {
+            $fase = $this->getFase($slugFase);
+
+            return view('fases.eliminar', array(
+                'titol' => 'Eliminar fase',
+                'fase' => $fase
+            ));
+        } else {
+            return redirect()->to('/gestio/acces');
+        }
+
+    }
+
+    // Eliminar fase
+    public function eliminarFase(Request $request) {
+
+        Fase::where('id', $request->input('id'))->delete();
+
+        return redirect('/gestio/fases');
+
+    }
+
+    // Formulari creació de fase
+    public function formCrearFase() {
+
+        if( auth()->check() ) {
+            return view('fases.crear', array(
+                'titol' => 'Crear procediment'
+            ));
+        } else {
+            return redirect()->to('/gestio/acces');
+        }
+
+    }
+
+    // Creació d'una fase
+    public function crearFase(Request $request) {
+        if( auth()->check() ) {
+            Fase::create([
+                'nom' => $request->input('nom'),
+                'slug' => $request->input('slug'),
+                'icona' => $request->input('icona'),
+                'descripcio' => $request->input('descripcio'),
+                'ordre' => $request->input('ordre')
+            ]);
+
+            return redirect('/gestio/fases');
+        } else {
+            return redirect()->to('/gestio/acces');
+        }
+    }
+
 }
