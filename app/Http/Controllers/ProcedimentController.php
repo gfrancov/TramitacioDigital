@@ -103,10 +103,11 @@ class ProcedimentController extends Controller
 
     }
 
+    // Modificació d'un procediment
     public function modificarProcediment(Request $request) {
 
         if( auth()->check() ) {
-            $procediment = Procediment::find ( $request->input('id') );
+            $procediment = Procediment::find( $request->input('id') );
             $procediment->nom = $request->input('nom');
             $procediment->slug = $request->input('slug');
             $procediment->actor = $request->input('actor');
@@ -119,6 +120,31 @@ class ProcedimentController extends Controller
         } else {
             return redirect()->to('/gestio/acces');
         }
+
+    }
+
+    // Confirmació per eliminar un procediment
+    public function formEliminarProcediment($slugProcediment) {
+
+        if( auth()->check() ) {
+            $procediment = $this->getProcediment($slugProcediment);
+
+            return view('procediments.eliminar', array(
+                'titol' => 'Eliminar procediment',
+                'procediment' => $procediment
+            ));
+        } else {
+            return redirect()->to('/gestio/acces');
+        }
+
+    }
+
+    // Eliminar procediment
+    public function eliminarProcediment(Request $request) {
+
+        Procediment::where('id', $request->input('id'))->delete();
+
+        return redirect('/gestio/procediments');
 
     }
 

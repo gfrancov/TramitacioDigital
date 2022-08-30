@@ -73,11 +73,11 @@
                             <h4 style="display: flex; justify-content: space-between; align-items: center;">
                                 Contingut
                                 <div class="botons">
-                                    <a class="btn btn-warning" href="/gestio/xuleta"><i class="fa-solid fa-pen-to-square"></i> Xuleta</a>
+                                    <a class="btn btn-warning" href="/gestio/xuleta" target="_blank"><i class="fa-solid fa-pen-to-square"></i> Xuleta</a>
                                     <a class="btn btn-info" href="#previsualitzar"><i class="fa-solid fa-eye"></i> Previsualitzar</a>
                                 </div>
                             </h4>
-                            <textarea name="contingut" id="contingut" style="width: 100%; height: 20vh;"><p>Aquí hauràs d'introduir el contingut del procediment en format HTML.</p>
+                            <textarea name="contingut" id="contingut" class="form-control" style="width: 100%; height: 20vh; border: 1px solid black;"><p>Aquí hauràs d'introduir el contingut del procediment en format HTML.</p>
 <p>Pots utilitzar la xuleta i previsualitzar el resultat abans de publicar.</p></textarea>
                             <input style="width: 100%;" type="submit" value="Crear procediment" class="btn btn-success mt-4" name="crear" id="crear"/>
                         </div>

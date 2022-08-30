@@ -29,8 +29,10 @@ Route::get('/gestio/xuleta', function() {
     return view('xuleta',['titol' => 'Xuleta']);
 });
 Route::post('/gestio/procediment/crear/validacio', [ProcedimentController::class, 'crearProcediment'])->name('gestio.procediments.crear');
-Route::get('/gestio/procediment/editar/{faseSlug?}', [ProcedimentController::class, 'formModificarProcediment'])->name('gestio.procediments.modificar.formulari');
+Route::get('/gestio/procediment/editar/{procedimentSlug?}', [ProcedimentController::class, 'formModificarProcediment'])->name('gestio.procediments.modificar.formulari');
 Route::post('/gestio/procediment/editar', [ProcedimentController::class, 'modificarProcediment'])->name('gestio.procediments.modificar');
+Route::get('/gestio/procediment/eliminar/{procedimentSlug?}', [ProcedimentController::class, 'formEliminarProcediment'])->name('gestio.procediments.eliminar.formulari');
+Route::post('/gestio/procediment/eliminar', [ProcedimentController::class, 'eliminarProcediment'])->name('gestio.procediments.eliminar');
 
 
 // Adreces d'usuari
