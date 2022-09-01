@@ -154,6 +154,19 @@
                     </div>
                 </div>
 
+                <!-- Un exemple -->
+                <div class="row justify-content-center mt-5">
+                    <h3>Taula</h3>
+                </div>
+                <div class="row justify-content-center mb-5">
+                    <div class="col-lg-6 col-12">
+                <textarea style="width: 100%; resize: none;" rows="11" readonly>
+</textarea>
+                    </div>
+
+                </div>
+
+
 		    </div>
 		</div>
     </div>

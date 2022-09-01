@@ -17,14 +17,14 @@
 
                     @foreach ( $fases as $fase )
 
-                        <li class="nav-item section-title mb-0 mt-3"><a class="nav-link active" href="/fase/{{$fase->slug}}"><span class="theme-icon-holder me-2"><i class="fas {{$fase->icona}}"></i></span>{{$fase->nom}}</a></li>
+                        <li class="nav-item section-title mb-0 mt-3"><a class="nav-link active" href="/fase/{{$fase->slug}}"><span class="theme-icon-holder me-2"><i class="fas {{$fase->icona}}"></i></span>{{$fase->ordre}} - {{$fase->nom}}</a></li>
 
                         @foreach ( $procediments as $procediment )
                             @if ($procediment->fase == $fase->id)
                                 @if ($actualFase->id == $fase->id)
-                                <li class="nav-item"><a class="nav-link scrollto" href="#{{$procediment->slug}}">{{$procediment->nom}}</a></li>
+                                <li class="nav-item"><a class="nav-link scrollto" href="#{{$procediment->slug}}">{{$fase->ordre}}.{{$procediment->ordre}} - {{$procediment->nom}}</a></li>
                                 @else
-                                    <li class="nav-item"><a class="nav-link" href="/fase/{{$fase->slug}}#{{$procediment->slug}}">{{$procediment->nom}}</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="/fase/{{$fase->slug}}#{{$procediment->slug}}">{{$fase->ordre}}.{{$procediment->ordre}} - {{$procediment->nom}}</a></li>
                                 @endif
                             @endif
                         @endforeach
@@ -39,6 +39,10 @@
 	    <div class="docs-content">
 		    <div class="container">
 			    <article class="docs-article pt-0" id="section-1">
+                    <section class="docs-section" id="{{$actualFase->slug}}">
+                        <h1>{{$actualFase->ordre}} - {{ $actualFase->nom }}</h1>
+                        <p>{{$actualFase->descripcio}}</p>
+                    </section>
                     @foreach ( $actualProcediments as $actualProcediment )
 
 				    <section class="docs-section" agent="{{$actualProcediment->actor}}" id="{{$actualProcediment->slug}}">
@@ -46,7 +50,9 @@
                             @if ( auth()->check() )
                                 <a href="/gestio/procediment/editar/{{$actualProcediment->slug}}"><i class="fa-solid fa-pen-to-square"></i></a>
                             @endif
-                            {{$actualProcediment->nom}}
+
+                            {{$actualFase->ordre}}.{{$actualProcediment->ordre}} - {{$actualProcediment->nom}}
+
                             @switch($actualProcediment->actor)
                                 @case('Sol·licitant')
                                     <span class="badge bg-warning">Sol·licitant</span>

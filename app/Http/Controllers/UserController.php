@@ -134,7 +134,6 @@ class UserController extends Controller
     // Modificar usuari
     public function modificarUsuari(Request $request) {
 
-
         if( auth()->check() ) {
 
             if($request->filled('password')) {
