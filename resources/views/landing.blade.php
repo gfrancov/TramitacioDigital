@@ -36,8 +36,26 @@
                                     </h5>
                                     <div class="card-text">
                                         {{$fase->descripcio}}
+                                        <a class="btn btn-primary mt-3 p-1" style="width: 100%;" href="/fase/{{$fase->slug}}">Anar a la fase</a>
                                     </div>
-                                    <a class="card-link-mask" href="/fase/{{$fase->slug}}"></a>
+                                    <div class="card-text text-center mt-2">
+                                        <a onclick="ensenyar({{$fase->id}})" id="toggle-fase-{{$fase->id}}" style="font-size: 30px; cursor: pointer;" class="text-primary"><i class="fa-solid fa-circle-chevron-down"></i></a>
+                                    </div>
+                                    <ul class="list-group list-group-flush mt-2" style="display: none;" id="procediments-{{$fase->id}}">
+
+                                        @foreach ( $procediments as $procediment )
+
+                                            @if ( $fase->id == $procediment->fase )
+
+                                                <li class="list-group-item fila-procediment">
+                                                    <a href="/fase/{{$fase->slug}}#{{$procediment->slug}}">{{$fase->ordre}}.{{$procediment->ordre}} - {{$procediment->nom}}</a>
+                                                </li>
+
+                                            @endif
+
+                                        @endforeach
+
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -59,6 +77,9 @@
                 <a class="btn btn-light m-1" href="https://espai.interior.gencat.cat/Eines-recursos/Administracio-electronica/Transformaci%C3%B3_Digital/Documents/Infografia%20del%20circuit%20d%E2%80%99implantaci%C3%B3%20d%E2%80%99un%20tr%C3%A0mit%20digital.pdf" target="_blank">Infografia <i class="fas fa-file ml-2"></i></a>
 		    </div>
 	    </div>
-    </section><!--//cta-section-->
+    </section>
+
+    <script type="text/javascript" src="{{asset('assets/js/infografia.js')}}"></script>
+
 
 @include('includes.footer')

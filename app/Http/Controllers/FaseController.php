@@ -12,9 +12,11 @@ class FaseController extends Controller
     // Landing page
     public function landing() {
         $fases = $this->allFases();
+        $procediments = ProcedimentController::allProcediments();
         return view('landing', array(
             'titol' => 'Inici',
-            'fases' => $fases
+            'fases' => $fases,
+            'procediments' => $procediments
         ));
     }
 
