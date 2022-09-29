@@ -88,5 +88,5 @@
                 @endif
             </div>
         </div>
-
+<script src="{{asset('assets/js/docs.js')}}"></script>
 @include('includes.footer')

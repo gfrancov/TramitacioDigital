@@ -17,39 +17,10 @@
 	    <div class="container">
 		    <div class="docs-overview py-5">
 
-                <!-- Un exemple -->
                 <div class="row justify-content-center mt-5">
-                    <h3>Paràgraf</h3>
+                    <p>Aquí trobaràs els elements per continguts més avançats i que no hi són disponibles al constructor.</p>
+                    <p>Pots copiar el codi des d'aquí i enganxar-ho al codi HTML del constructor, que el podràs obrir amb el botó <>.</p>
                 </div>
-			    <div class="row justify-content-center mb-5">
-                    <div class="col-lg-6 col-12">
-                        <textarea style="width: 100%; resize: none;" readonly><p>Això és un paràgraf</p></textarea>
-                    </div>
-                    <div class="col-lg-6 col-12">
-                        <div class="capsa-demostracio p-3" style="border: 1px solid black; border-radius: 8px;">
-                            <p>Això és un paràgraf</p>
-                        </div>
-                    </div>
-			    </div>
-
-                <hr/>
-
-                <!-- Un exemple -->
-                <div class="row justify-content-center mt-5">
-                    <h3>Negreta</h3>
-                </div>
-                <div class="row justify-content-center mb-5">
-                    <div class="col-lg-6 col-12">
-                        <textarea style="width: 100%; resize: none;" readonly><p>Text en <b>negreta</b></p></textarea>
-                    </div>
-                    <div class="col-lg-6 col-12">
-                        <div class="capsa-demostracio p-3" style="border: 1px solid black; border-radius: 8px;">
-                            <p>Text en <b>negreta</b></p>
-                        </div>
-                    </div>
-                </div>
-
-                <hr/>
 
                 <!-- Un exemple -->
                 <div class="row justify-content-center mt-5">
@@ -69,49 +40,6 @@
                                 <i class="fa-solid fa-link"></i>
                                 Text del botó
                             </a>
-                        </div>
-                    </div>
-                </div>
-
-                <hr/>
-
-                <!-- Un exemple -->
-                <div class="row justify-content-center mt-5">
-                    <h3>Subratllat</h3>
-                </div>
-                <div class="row justify-content-center mb-5">
-                    <div class="col-lg-6 col-12">
-                        <textarea style="width: 100%; resize: none;" readonly><p>Text <u>subratllat</u></p></textarea>
-                    </div>
-                    <div class="col-lg-6 col-12">
-                        <div class="capsa-demostracio p-3" style="border: 1px solid black; border-radius: 8px;">
-                            <p>Text <u>subratllat</u></p>
-                        </div>
-                    </div>
-                </div>
-
-                <hr/>
-
-                <!-- Un exemple -->
-                <div class="row justify-content-center mt-5">
-                    <h3>Llista</h3>
-                </div>
-                <div class="row justify-content-center mb-5">
-                    <div class="col-lg-6 col-12">
-                        <textarea style="width: 100%; resize: none;" rows="5" readonly>
-<ul>
-    <li>Element 1</li>
-    <li>Element 2</li>
-    <li>Element 3</li>
-</ul></textarea>
-                    </div>
-                    <div class="col-lg-6 col-12">
-                        <div class="capsa-demostracio p-3" style="border: 1px solid black; border-radius: 8px;">
-                            <ul>
-                                <li>Element 1</li>
-                                <li>Element 2</li>
-                                <li>Element 3</li>
-                            </ul>
                         </div>
                     </div>
                 </div>

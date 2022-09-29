@@ -74,24 +74,32 @@
                                 Contingut
                                 <div class="botons">
                                     <a class="btn btn-warning" href="/gestio/xuleta" target="_blank"><i class="fa-solid fa-pen-to-square"></i> Xuleta</a>
-                                    <a class="btn btn-info" href="#previsualitzar"><i class="fa-solid fa-eye"></i> Previsualitzar</a>
                                 </div>
                             </h4>
-                            <textarea name="contingut" id="contingut" class="form-control" style="width: 100%; height: 20vh; border: 1px solid black;"><p>Aquí hauràs d'introduir el contingut del procediment en format HTML.</p>
-<p>Pots utilitzar la xuleta i previsualitzar el resultat abans de publicar.</p></textarea>
+                            <textarea name="contingut" id="contingut" class="form-control" style="width: 100%; height: 20vh; border: 1px solid black;"><p>Aquí hauràs de construir el contingut del procediment en format HTML.</p>
+<p>Pots utilitzar la xuleta per afegir opcions molt més avançades.</p></textarea>
                             <input style="width: 100%;" type="submit" value="Crear procediment" class="btn btn-success mt-4" name="crear" id="crear"/>
                         </div>
 
                     </div>
 		    </div>
-            <div class="row justify-content-center mt-5 pt-5" id="previsualitzar">
-                <div id="contingut-visualitzacio" class="p-4" style="border: 1px solid black; border-radius: 8px;">
-                    <p>Aquí hauràs d'introduir el contingut del procediment en format HTML.</p>
-                    <p>Pots utilitzar la xuleta i previsualitzar el resultat abans de publicar.</p>
-                </div>
-            </div>
 		</div>
     </div>
+    <!-- TinyMCE Script -->
+<script>
+    tinymce.init({
+        selector: '#contingut',
+        plugins: 'image autolink lists media table link bullist numlist',
+        toolbar: 'undo redo | styleselect | bold italic underline link | alignleft aligncenter alignright alignjustify | table bullist numlist | outdent indent | code | ',
+        tinycomments_mode: 'embedded',
+        tinycomments_author: 'Gabriel Franco',
+        menubar: false,
+        language: 'ca',
+        table_class_list: [
+            {title: 'Zebra', value: 'table table-striped'},
+            {title: 'Vores', value: 'table table-bordered'}
+        ]
+        });
+</script>
 
 @include('includes.footer')
-<script type="text/javascript" src="{{asset('assets/js/preview.js')}}"></script>

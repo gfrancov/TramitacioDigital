@@ -8,7 +8,7 @@
 	    <div class="theme-bg-shapes-right"></div>
 	    <div class="theme-bg-shapes-left"></div>
 	    <div class="container">
-		    <h1 class="page-heading single-col-max mx-auto">Crear un usuari</h1>
+		    <h1 class="page-heading single-col-max mx-auto">Modificar un usuari</h1>
 	    </div>
     </div>
 

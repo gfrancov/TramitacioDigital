@@ -16,14 +16,6 @@
 
 </footer>
 
-
-<!-- Wysiwyg -->
-<script src="https://jhollingworth.github.io/bootstrap-wysihtml5//lib/js/wysihtml5-0.3.0.js"></script>
-<script src="https://jhollingworth.github.io/bootstrap-wysihtml5//lib/js/jquery-1.7.2.min.js"></script>
-<script src="https://jhollingworth.github.io/bootstrap-wysihtml5//lib/js/prettify.js"></script>
-<script src="https://jhollingworth.github.io/bootstrap-wysihtml5//lib/js/bootstrap.min.js"></script>
-<script src="https://jhollingworth.github.io/bootstrap-wysihtml5//src/bootstrap-wysihtml5.js"></script>
-
 <!-- Javascript -->
 <script src="{{asset('assets/plugins/popper.min.js')}}"></script>
 <script src="{{asset('assets/plugins/bootstrap/js/bootstrap.min.js')}}"></script>
@@ -32,7 +24,6 @@
 <script src="{{asset('assets/js/highlight-custom.js')}}"></script>
 <script src="{{asset('assets/plugins/simplelightbox/simple-lightbox.min.js')}}"></script>
 <script src="{{asset('assets/plugins/gumshoe/gumshoe.polyfills.min.js')}}"></script>
-<script src="{{asset('assets/js/docs.js')}}"></script>
 
 </body>
 </html>

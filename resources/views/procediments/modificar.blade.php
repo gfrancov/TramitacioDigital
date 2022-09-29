@@ -79,7 +79,6 @@
                                 Contingut
                                 <div class="botons">
                                     <a class="btn btn-warning" href="/gestio/xuleta" target="_blank"><i class="fa-solid fa-pen-to-square"></i> Xuleta</a>
-                                    <a class="btn btn-info" href="#previsualitzar"><i class="fa-solid fa-eye"></i> Previsualitzar</a>
                                 </div>
                             </h4>
                             <textarea name="contingut" id="contingut" style="width: 100%; height: 20vh;">{{$procediment->contingut}}</textarea>
@@ -88,14 +87,23 @@
 
                     </div>
 		    </div>
-            <div class="row justify-content-center mt-5 pt-5" id="previsualitzar">
-                <div id="contingut-visualitzacio" class="p-4" style="border: 1px solid black; border-radius: 8px;">
-                    <h2>{{$procediment->nom}}</h2>
-                    {!!$procediment->contingut!!}
-                </div>
-            </div>
 		</div>
     </div>
+    <!-- TinyMCE Script -->
+<script>
+    tinymce.init({
+        selector: '#contingut',
+        plugins: 'image autolink lists media table link bullist numlist',
+        toolbar: 'undo redo | styleselect | bold italic underline link | alignleft aligncenter alignright alignjustify | table bullist numlist | outdent indent | code | ',
+        tinycomments_mode: 'embedded',
+        tinycomments_author: 'Gabriel Franco',
+        menubar: false,
+        language: 'ca',
+        table_class_list: [
+            {title: 'Zebra', value: 'table table-striped'},
+            {title: 'Vores', value: 'table table-bordered'}
+        ]
+        });
+</script>
 
 @include('includes.footer')
-<script type="text/javascript" src="{{asset('assets/js/preview.js')}}"></script>

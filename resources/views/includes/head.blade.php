@@ -17,7 +17,6 @@
     <meta property="og:image" content="{{asset('assets/images/screenshot.png')}}" />
     <meta property="og:description" content="Aquí trobaràs la informació necessaria sobre les fases i cadascun dels procediments que existeixen a la implantació d'un tràmit digital." />
 
-
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
 
@@ -27,5 +26,8 @@
     <!-- Theme CSS -->
     <link id="theme-style" rel="stylesheet" href="{{asset('assets/css/theme.css')}}">
     <link id="theme-style" rel="stylesheet" href="{{asset('assets/css/custom.css')}}">
+
+    <!-- TinyMCE HTML Editor -->
+    <script src="https://cdn.tiny.cloud/1/q8v817hd1zvat2hrfue2avaeh4ymh9dxzuldmhtvxopxbxey/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
 
 </head>
